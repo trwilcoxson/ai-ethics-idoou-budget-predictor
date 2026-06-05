@@ -26,7 +26,7 @@ os.makedirs('images', exist_ok=True)
 # ============================================================
 # DATA PIPELINE (same as before)
 # ============================================================
-df = pd.read_csv('udacity_ai_ethics_project_data.csv')
+df = pd.read_csv('ai_ethics_project_data.csv')
 df = df.dropna()
 df['Age'] = pd.cut(df['Age'], bins=[17,24,44,65,92], labels=['18-24','25-44','45-65','66-92'])
 df['Budget (in dollars)'] = df['Budget (in dollars)'].apply(lambda x: '>=300' if x >= 300 else '<300')
